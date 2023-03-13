@@ -8,5 +8,9 @@ function generatePassword() {
         password += chars.substring(randomNumber, randomNumber + 1)
 
     }
+    const inputEL = document.querySelector("#password")
+    inputEL.value = password
+
+    console.log(password)
 };
 generatePassword()
