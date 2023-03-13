@@ -13,4 +13,11 @@ function generatePassword() {
 
     console.log(password)
 };
+
+const passwordLengthEL = document.querySelector("#password-length")
+passwordLengthEL.addEventListener("input", function () {
+    const passwordLength = passwordLengthEL.value
+    console.log(passwordLength)
+});
+
 generatePassword()
