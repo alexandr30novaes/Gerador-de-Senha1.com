@@ -26,6 +26,8 @@ main {
 }
 .password {
     display: flex; /* alinhado os btn na mesma linha*/
+    align-items: center;
+    padding: 1rem 1.5rem;
 }
 .password .text {
     flex: 1; /*alinhado os btn a direira*/
