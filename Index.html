@@ -4,19 +4,26 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> <!-- import de font do google font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
     <title>Gerador De Senha</title>
+    <link rel="stylesheet" href="Reset.css">
     <link rel="stylesheet" type="text/css" href="Style.css">
 </head>
 <body>
-    <h1>Gerador de Senha</h1>
-    <p>Utilize o nosso gerador de senha online, para a criação de uma senha forte e segura</p>
+    <main>
+        <section class="nave-bar">
+            <h1 class="title">Gerador de Senha</h1>
+            <p class="subtitle">Utilize o nosso gerador de senha online, para a criação de uma senha forte e segura</p>
+        </section>
 
-    <input type="text" name="password" id="password">
+        <input type="text" name="password" id="password">
 
-    <input type="range" name="password-length" id="password-length" value="16" min="6" max="64" />
+        <input type="range" name="password-length" id="password-length" value="16" min="6" max="64" />
 
-    <input type="button" id="btn" value="Copiar Senha">
-    
+        <input type="button" id="btn" value="Copiar Senha">
+    </main>
     <script src="Sidebar.js"></script>
 </body>
 </html>
