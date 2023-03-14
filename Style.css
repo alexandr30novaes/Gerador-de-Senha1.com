@@ -18,4 +18,29 @@ main {
     font-weight: bold;
     padding-bottom: 1.5rem; /*espaçameto a baixo*/
 }
-
+.box {
+    background: #fff;
+    box-shadow: 0 1px 2px rgba(64, 66, 68, 0.3);
+    border-radius: 8px;
+    margin-bottom: 3rem;
+}
+.password {
+    display: flex; /* alinhado os btn na mesma linha*/
+}
+.password .text {
+    flex: 1; /*alinhado os btn a direira*/
+}
+.password .text input {
+    font-family: "Inconsolata", serif;
+    font-size: 3rem;
+    border: none; /* removendo borda do btn */
+    outline: none;
+    cursor: default;
+    height: 52px;
+    width: 100%;
+    transition: all 0.2s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
