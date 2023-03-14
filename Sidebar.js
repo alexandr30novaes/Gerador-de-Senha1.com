@@ -1,5 +1,6 @@
 
 let passwordLength = 16
+
 //input da senha
 const inputEL = document.querySelector("#password")
 
@@ -17,10 +18,13 @@ function generatePassword() {
     //Adicionando a função de gerar senha no input. 
     inputEL.value = password
 };
-//Função do btn para copiar o testo do input
+
+//Formato de API dos navegadores
 function copy () {
     navigator.clipboard.writeText(inputEL.value)
 };
+
+//Função do btn para copiar o testo do input
 const copyButtonEL = document.querySelector("#btn")
 copyButtonEL.addEventListener("click" , copy)
 
