@@ -46,3 +46,10 @@ main {
     -ms-user-select: none;
     user-select: none;
 }
+.password .actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}

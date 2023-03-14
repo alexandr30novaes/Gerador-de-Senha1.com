@@ -25,8 +25,9 @@ function copy () {
 };
 
 //Função do btn para copiar o testo do input
-const copyButtonEL = document.querySelector("#btn")
-copyButtonEL.addEventListener("click" , copy)
+document.querySelector("#btn").addEventListener("click" , copy)
+//Função de copiar o input do botão
+document.querySelector("#copy1").addEventListener("click" , copy)
 
 //Função do input RANGE.
 const passwordLengthEL = document.querySelector("#password-length")
