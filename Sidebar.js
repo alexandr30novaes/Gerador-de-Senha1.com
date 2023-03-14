@@ -1,4 +1,7 @@
+
 let passwordLength = 16
+//input da senha
+const inputEL = document.querySelector("#password")
 
 //Função gerando senha aleatoria, em um lupin.
 function generatePassword() {
@@ -11,12 +14,16 @@ function generatePassword() {
         password += chars.substring(randomNumber, randomNumber + 1)
 
     }
-    //Adicionando a função de gerar senha no input.
-    const inputEL = document.querySelector("#password") 
+    //Adicionando a função de gerar senha no input. 
     inputEL.value = password
-
-    console.log(password)
 };
+//Função do btn para copiar o testo do input
+function copy () {
+    navigator.clipboard.writeText(inputEL.value)
+};
+const copyButtonEL = document.querySelector("#btn")
+copyButtonEL.addEventListener("click" , copy)
+
 //Função do input RANGE.
 const passwordLengthEL = document.querySelector("#password-length")
 passwordLengthEL.addEventListener("input", function () {
