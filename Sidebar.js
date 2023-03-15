@@ -8,6 +8,7 @@ const inputEL = document.querySelector("#password")
 const upperCaseCheckeEL = document.querySelector("#uppercase-chek")
 const numberCheckeEL = document.querySelector("#number-chek")
 const symbolCheckeEL = document.querySelector("#symbol-chek")
+const securityIndicatorBarEL = document.querySelector("#security-indicator-bar")
 
 //Função gerando senha aleatoria, em um lupin.
 function generatePassword() {
@@ -39,7 +40,18 @@ function generatePassword() {
     }
     //Adicionando a função de gerar senha no input. 
     inputEL.value = password
+
+    calculateQuality()
 };
+
+//Função da barra security-indicator-bar
+function calculateQuality() {
+    const percent = Math.round((passwordLength / 64) * 100)
+
+    console.log(percent)
+
+    securityIndicatorBarEL.style.width = `${percent}%` /* Abrindo o style no js, e ajustando o valor p/ % */
+}
 
 //Formato de API dos navegadores
 function copy () {
