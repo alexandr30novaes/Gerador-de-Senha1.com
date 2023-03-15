@@ -1,5 +1,5 @@
 
-let passwordLength = 16
+let passwordLength = 15
 
 //input da senha
 const inputEL = document.querySelector("#password")
@@ -55,7 +55,7 @@ document.querySelector("#copy1").addEventListener("click" , copy)
 const passwordLengthEL = document.querySelector("#password-length")
 passwordLengthEL.addEventListener("input", function () {
     passwordLength = passwordLengthEL.value
-    console.log(passwordLength)
+    document.querySelector("#password-length-text") .innerText = passwordLength
     generatePassword()
 });
 

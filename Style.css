@@ -109,6 +109,8 @@ main {
     opacity: 0.8;
     transition: opacity 0.2s;
     margin-top: 1rem;
+    width: 20rem;
+    
 }
 .customize .password-length .slider:hover {
     opacity: 1;
@@ -140,6 +142,7 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    margin-left: 12rem;
 }
 .checkbox-container input { /*Removendo o chekbox.*/
     position: absolute;
