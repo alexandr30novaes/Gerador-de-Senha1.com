@@ -4,10 +4,32 @@ let passwordLength = 16
 //input da senha
 const inputEL = document.querySelector("#password")
 
+//input checkbox-container
+const upperCaseCheckeEL = document.querySelector("#uppercase-chek")
+const numberCheckeEL = document.querySelector("#number-chek")
+const symbolCheckeEL = document.querySelector("#symbol-chek")
+
 //Função gerando senha aleatoria, em um lupin.
 function generatePassword() {
-    const chars = "abcdefghjklmnpqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ123456789?!@&*()[]"
 
+    //inputs Maiúscula, Numeros e Simbolos
+    let chars = "abcdefghjklmnpqrstuvwxyz"
+    const upperCaseChars = "ABCDEFGHJKLMNPQRSTUVWXYZ"
+    const numberChars = "123456789"
+    const symbolChars = "?!@&*()[]"
+
+    if (upperCaseCheckeEL.checked) { //Condição do click
+        chars += upperCaseChars
+    }
+
+    if (numberCheckeEL.checked) {
+        chars += numberChars
+    }
+
+    if (symbolCheckeEL.checked) {
+        chars += symbolChars
+    }
+    
     let password = ""
     
     for (let i = 0; i < passwordLength; i++) {
@@ -36,5 +58,9 @@ passwordLengthEL.addEventListener("input", function () {
     console.log(passwordLength)
     generatePassword()
 });
+
+upperCaseCheckeEL.addEventListener("click", generatePassword) //Função click do checkbox-container
+numberCheckeEL.addEventListener("click", generatePassword)
+symbolCheckeEL.addEventListener("click", generatePassword)
 
 generatePassword()
