@@ -46,7 +46,7 @@ function generatePassword() {
 
 //Função da barra security-indicator-bar
 function calculateQuality() {
-    const percent = Math.round((passwordLength / 64) * 100)
+    const percent = Math.round((passwordLength / 32) * 100)
 
     console.log(percent)
 
