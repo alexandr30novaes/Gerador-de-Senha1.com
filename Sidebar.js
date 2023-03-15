@@ -46,7 +46,14 @@ function generatePassword() {
 
 //Função da barra security-indicator-bar
 function calculateQuality() {
-    const percent = Math.round((passwordLength / 32) * 100)
+    //Dividindo o peso da barra entre os chebox-container, e a barra de tamanho 
+    const percent = Math.round(
+        (passwordLength / 32) * 25 + 
+        (upperCaseCheckeEL.checked ? 15 : 0) +
+        (numberCheckeEL.checked ? 25 : 0) +
+        (symbolCheckeEL .checked ? 35 : 0)
+
+    )
 
     console.log(percent)
 
