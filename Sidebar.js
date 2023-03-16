@@ -58,6 +58,20 @@ function calculateQuality() {
     console.log(percent)
 
     securityIndicatorBarEL.style.width = `${percent}%` /* Abrindo o style no js, e ajustando o valor p/ % */
+
+    if (percent > 69) {
+        securityIndicatorBarEL.classList.remove("critical")
+        securityIndicatorBarEL.classList.remove("warning")
+        securityIndicatorBarEL.classList.add("safe")
+    } else if(percent > 50) {
+        securityIndicatorBarEL.classList.remove("critical")
+        securityIndicatorBarEL.classList.add("warning")
+        securityIndicatorBarEL.classList.remove("safe")
+    } else {
+        securityIndicatorBarEL.classList.add("critical")
+        securityIndicatorBarEL.classList.remove("warning")
+        securityIndicatorBarEL.classList.remove("safe")
+    }
 }
 
 //Formato de API dos navegadores
