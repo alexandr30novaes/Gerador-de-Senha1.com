@@ -72,6 +72,13 @@ function calculateQuality() {
         securityIndicatorBarEL.classList.remove("warning")
         securityIndicatorBarEL.classList.remove("safe")
     }
+
+    if (percent >= 100 ) { //arredondando o final da barra.
+        securityIndicatorBarEL.classList.add("completed")
+    } else {
+        securityIndicatorBarEL.classList.remove("completed")
+
+    }
 }
 
 //Formato de API dos navegadores
