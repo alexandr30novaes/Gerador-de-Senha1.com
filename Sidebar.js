@@ -42,6 +42,7 @@ function generatePassword() {
     inputEL.value = password
 
     calculateQuality()
+    calculateFontSize()
 };
 
 //Função da barra security-indicator-bar
@@ -77,6 +78,16 @@ function calculateQuality() {
         securityIndicatorBarEL.classList.add("completed")
     } else {
         securityIndicatorBarEL.classList.remove("completed")
+
+    }
+}
+
+function calculateFontSize() {
+    if (passwordLength > 22) {
+        inputEL.classList.add("font-sm")
+
+    } else{ 
+        inputEL.classList.remove("font-sm")
 
     }
 }
