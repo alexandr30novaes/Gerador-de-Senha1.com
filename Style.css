@@ -112,8 +112,6 @@ main {
     opacity: 0.8;
     transition: opacity 0.2s;
     margin-top: 1rem;
-    width: 20rem;
-    
 }
 .customize .password-length .slider:hover {
     opacity: 1;
@@ -145,7 +143,7 @@ main {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-    margin-left: 12rem;
+    margin-left: 25rem;
 }
 .checkbox-container input { /*Removendo o chekbox.*/
     position: absolute;
@@ -201,4 +199,39 @@ main {
 }
 .submit input:hover {
     background-color: #9b51e0;
+}
+
+@media only screen and  (max-width: 540px) { /* Responsividade p/ mobail*/
+    .password {
+        padding: 1rem;
+    }
+    .password .text input {
+        font-size: 1.5rem;
+    }
+    .password .text input.font-sm {
+        font-size: 1.2rem;
+    }
+    .password .actions img {
+        width: 24px ;
+    }
+    
+    
+}
+@media only screen and  (max-width: 415px) {
+    
+    .checkbox-container {
+        right: 23rem;
+    }
+    .password {
+        padding: 1rem;
+    }
+    .password .text input {
+        font-size: 1.5rem;
+    }
+    .password .text input.font-sm {
+        font-size: 1.2rem;
+    }
+    .password .actions img {
+        width: 24px ;
+    }
 }
